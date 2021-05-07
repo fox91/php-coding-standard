@@ -102,7 +102,10 @@
     <rule ref="SlevomatCodingStandard.Files.FunctionLength">
         <type>warning</type>
     </rule>
-    <rule ref="SlevomatCodingStandard.Functions.UnusedParameter.UnusedParameter">
+    <rule ref="SlevomatCodingStandard.Functions.FunctionLength">
+        <type>warning</type>
+    </rule>
+    <rule ref="SlevomatCodingStandard.Functions.UnusedParameter">
         <type>warning</type>
     </rule>
     <rule ref="SlevomatCodingStandard.Namespaces.UseSpacing">
@@ -123,7 +126,7 @@
     <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingTraversableTypeHintSpecification">
         <type>warning</type>
     </rule>
-    <rule ref="SlevomatCodingStandard.Variables.UnusedVariable.UnusedVariable">
+    <rule ref="SlevomatCodingStandard.Variables.UnusedVariable">
         <type>warning</type>
     </rule>
 </ruleset>
