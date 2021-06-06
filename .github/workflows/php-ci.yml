@@ -72,3 +72,9 @@ jobs:
         name: Validate composer.json with dependencies
         run: composer validate --strict --with-dependencies
         continue-on-error: true
+      -
+        name: List installed coding standards
+        run: ./vendor/bin/phpcs -i
+      -
+        name: List included sniffs
+        run: ./vendor/bin/phpcs --standard=Fox91CodingStandard -e
