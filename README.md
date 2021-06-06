@@ -1,4 +1,4 @@
-# fox91 Coding Standard
+# fox91 PHP Coding Standards
 
 [![Latest version](https://img.shields.io/packagist/v/fox91/coding-standard.svg?colorB=007EC6)](https://packagist.org/packages/fox91/coding-standard)
 [![Downloads](https://img.shields.io/packagist/dt/fox91/coding-standard.svg?colorB=007EC6)](https://packagist.org/packages/fox91/coding-standard)
