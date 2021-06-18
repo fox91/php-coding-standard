@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Fox91 Coding Standard" xsi:noNamespaceSchemaLocation="../vendor/squizlabs/php_codesniffer/phpcs.xsd">
+    <rule ref="Generic.Formatting.SpaceAfterCast"/>
+
+    <rule ref="Generic.Formatting.SpaceAfterNot">
+        <properties>
+            <property name="spacing" value="0"/>
+        </properties>
+    </rule>
+
+    <rule ref="Generic.PHP.ForbiddenFunctions">
+        <properties>
+            <property name="forbiddenFunctions" type="array">
+                <element key="sizeof" value="count"/>
+                <element key="delete" value="unset"/>
+                <element key="print" value="echo"/>
+                <element key="is_null" value="null"/>
+                <element key="create_function" value="null"/>
+            </property>
+        </properties>
+    </rule>
+
+    <rule ref="Generic.WhiteSpace.ArbitraryParenthesesSpacing"/>
+
     <!-- <rule ref="PEAR"/> -->
 
     <!-- <rule ref="Zend"/> -->
@@ -8,10 +30,13 @@
 
     <!-- <rule ref="MySource"/> -->
 
-    <!-- <rule ref="Squiz"/> -->
     <rule ref="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnNewLine">
         <severity>0</severity>
     </rule>
+
+    <rule ref="Squiz.WhiteSpace.CastSpacing"/>
+
+    <rule ref="Squiz.WhiteSpace.FunctionOpeningBraceSpace"/>
 
     <!-- <rule ref="PSR1"/> -->
 
@@ -42,6 +67,7 @@
         <exclude name="SlevomatCodingStandard.ControlStructures.NewWithoutParentheses.UselessParentheses"/>
         <exclude name="SlevomatCodingStandard.ControlStructures.RequireSingleLineCondition"/>
         <exclude name="SlevomatCodingStandard.ControlStructures.RequireYodaComparison"/>
+        <exclude name="SlevomatCodingStandard.Files.FunctionLength"/>
         <exclude name="SlevomatCodingStandard.Files.LineLength"/>
         <exclude name="SlevomatCodingStandard.Files.TypeNameMatchesFileName"/>
         <exclude name="SlevomatCodingStandard.Functions.DisallowArrowFunction"/>
@@ -58,6 +84,7 @@
         <exclude name="SlevomatCodingStandard.PHP.DisallowReference"/>
         <exclude name="SlevomatCodingStandard.TypeHints.DisallowMixedTypeHint"/>
     </rule>
+
     <rule ref="SlevomatCodingStandard.Classes.ClassStructure">
         <properties>
             <property name="groups" type="array">
@@ -72,23 +99,28 @@
             </property>
         </properties>
     </rule>
+
     <rule ref="SlevomatCodingStandard.Classes.EmptyLinesAroundClassBraces">
         <properties>
             <property name="linesCountAfterOpeningBrace" value="0"/>
             <property name="linesCountBeforeClosingBrace" value="0"/>
         </properties>
     </rule>
+
     <rule ref="SlevomatCodingStandard.Classes.TraitUseSpacing">
         <properties>
             <property name="linesCountBeforeFirstUse" value="0"/>
         </properties>
     </rule>
+
     <rule ref="SlevomatCodingStandard.Commenting.DocCommentSpacing">
         <properties>
             <property name="linesCountBetweenDifferentAnnotationsTypes" value="1"/>
         </properties>
     </rule>
+
     <rule ref="SlevomatCodingStandard.ControlStructures.BlockControlStructureSpacing">
+        <type>warning</type>
         <properties>
             <property name="tokensToCheck" type="array">
                 <element value="T_SWITCH"/>
@@ -96,23 +128,28 @@
             </property>
         </properties>
     </rule>
+
     <rule ref="SlevomatCodingStandard.ControlStructures.EarlyExit.EarlyExitNotUsed">
         <type>warning</type>
     </rule>
-    <rule ref="SlevomatCodingStandard.Files.FunctionLength">
-        <type>warning</type>
-    </rule>
+
     <rule ref="SlevomatCodingStandard.Functions.FunctionLength">
         <type>warning</type>
+        <properties>
+            <property name="maxLinesLength" value="40"/>
+        </properties>
     </rule>
+
     <rule ref="SlevomatCodingStandard.Functions.UnusedParameter">
         <type>warning</type>
     </rule>
+
     <rule ref="SlevomatCodingStandard.Namespaces.UseSpacing">
         <properties>
             <property name="linesCountBetweenUseTypes" value="1"/>
         </properties>
     </rule>
+
     <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
         <properties>
             <property name="linesCountBeforeDeclare" value="0"/>
@@ -120,12 +157,15 @@
             <property name="spacesCountAroundEqualsSign" value="0"/>
         </properties>
     </rule>
+
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingTraversableTypeHintSpecification">
         <type>warning</type>
     </rule>
+
     <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingTraversableTypeHintSpecification">
         <type>warning</type>
     </rule>
+
     <rule ref="SlevomatCodingStandard.Variables.UnusedVariable">
         <type>warning</type>
     </rule>
