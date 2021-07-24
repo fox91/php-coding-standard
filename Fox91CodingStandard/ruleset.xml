@@ -42,9 +42,9 @@
 
     <!-- <rule ref="PSR12"/> -->
 
-    <rule ref="Security">
+    <!-- <rule ref="Security">
         <exclude name="Security.Drupal7"/>
-    </rule>
+    </rule> -->
 
     <rule ref="PHPCompatibility"/>
 
