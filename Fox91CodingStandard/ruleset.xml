@@ -51,6 +51,7 @@
     </rule>
 
     <!-- Squiz sniffs -->
+    <rule ref="Squiz.Arrays.ArrayBracketSpacing"/>
     <rule ref="Squiz.ControlStructures.ControlSignature"/>
     <rule ref="Squiz.ControlStructures.ForEachLoopDeclaration"/>
     <rule ref="Squiz.ControlStructures.ForLoopDeclaration"/>
@@ -67,6 +68,7 @@
     <rule ref="Squiz.WhiteSpace.ControlStructureSpacing.SpacingAfterOpen"/>
     <rule ref="Squiz.WhiteSpace.FunctionOpeningBraceSpace"/>
     <rule ref="Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore"/>
+    <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace"/>
 
     <!-- SlevomatCodingStandard sniffs -->
     <rule ref="SlevomatCodingStandard.Arrays.SingleLineArrayWhitespace"/>
