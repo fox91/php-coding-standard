@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Fox91 Coding Standard" xsi:noNamespaceSchemaLocation="../vendor/squizlabs/php_codesniffer/phpcs.xsd">
     <!-- Generic sniffs -->
+    <rule ref="Generic.Arrays.ArrayIndent"/>
     <rule ref="Generic.ControlStructures.InlineControlStructure"/>
     <rule ref="Generic.Formatting.SpaceAfterCast"/>
     <rule ref="Generic.Formatting.SpaceAfterNot">
@@ -23,8 +24,12 @@
     <rule ref="Generic.PHP.LowerCaseConstant"/>
     <rule ref="Generic.PHP.LowerCaseKeyword"/>
     <rule ref="Generic.WhiteSpace.ArbitraryParenthesesSpacing"/>
-    <rule ref="Generic.WhiteSpace.DisallowTabIndent.TabsUsed"/>
-    <rule ref="Generic.WhiteSpace.ScopeIndent"/>
+    <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
+    <rule ref="Generic.WhiteSpace.ScopeIndent">
+        <properties>
+            <property name="exact" value="true" />
+        </properties>
+    </rule>
 
     <!-- PHPCompatibility sniffs -->
     <rule ref="PHPCompatibility"/>
@@ -126,6 +131,7 @@
             <property name="linesCountBetweenUseTypes" value="1"/>
         </properties>
     </rule>
+    <rule ref="SlevomatCodingStandard.PHP.TypeCast.InvalidCastUsed"/>
     <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
         <properties>
             <property name="linesCountBeforeDeclare" value="0"/>
@@ -151,5 +157,10 @@
     <rule ref="SlevomatCodingStandard.Whitespaces.DuplicateSpaces"/>
 
     <!-- VariableAnalysis sniffs -->
-    <rule ref="VariableAnalysis"/>
+    <rule ref="VariableAnalysis">
+        <exclude name="VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable"/>
+    </rule>
+    <rule ref="VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable">
+        <type>error</type>
+    </rule>
 </ruleset>
