@@ -2,6 +2,11 @@
 <ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Fox91 Coding Standard Strict" xsi:noNamespaceSchemaLocation="../vendor/squizlabs/php_codesniffer/phpcs.xsd">
     <rule ref="Fox91CodingStandard"/>
 
+    <!-- PSR1 sniffs -->
+    <rule ref="PSR1.Classes.ClassDeclaration">
+        <type>error</type>
+    </rule>
+
     <!-- PSR2 sniffs -->
     <rule ref="PSR2"/>
 

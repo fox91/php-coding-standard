@@ -10,6 +10,7 @@
         </properties>
     </rule>
     <rule ref="Generic.Functions.FunctionCallArgumentSpacing"/>
+    <rule ref="Generic.NamingConventions.ConstructorName"/>
     <rule ref="Generic.PHP.ForbiddenFunctions">
         <properties>
             <property name="forbiddenFunctions" type="array">
@@ -33,6 +34,12 @@
 
     <!-- PHPCompatibility sniffs -->
     <rule ref="PHPCompatibility"/>
+
+    <!-- PSR1 sniffs -->
+    <rule ref="PSR1.Methods.CamelCapsMethodName"/>
+    <rule ref="PSR1.Classes.ClassDeclaration">
+        <type>warning</type>
+    </rule>
 
     <!-- PSR2 sniffs -->
     <rule ref="PSR2.Classes.ClassDeclaration.OpenBraceNewLine"/>
@@ -68,6 +75,10 @@
         <exclude name="Squiz.Functions.FunctionDeclarationArgumentSpacing.SpacingAfterHint"/>
     </rule>
     <rule ref="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine"/>
+    <rule ref="Squiz.NamingConventions">
+        <!-- already covered by PSR1.Methods.CamelCapsMethodName -->
+        <exclude name="Squiz.NamingConventions.ValidFunctionName.ScopeNotCamelCaps"/>
+    </rule>
     <rule ref="Squiz.Strings.ConcatenationSpacing"/>
     <rule ref="Squiz.WhiteSpace.CastSpacing"/>
     <rule ref="Squiz.WhiteSpace.ControlStructureSpacing.SpacingAfterOpen"/>
