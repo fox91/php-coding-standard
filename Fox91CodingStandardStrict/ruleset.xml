@@ -14,6 +14,9 @@
     <rule ref="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnNewLine">
         <severity>0</severity>
     </rule>
+    <rule ref="Squiz.NamingConventions.ValidVariableName.NotCamelCaps">
+        <type>error</type>
+    </rule>
 
     <!-- SlevomatCodingStandard sniffs -->
     <rule ref="SlevomatCodingStandard">
@@ -46,11 +49,11 @@
         <exclude name="SlevomatCodingStandard.PHP.DisallowReference"/>
         <exclude name="SlevomatCodingStandard.TypeHints.DisallowMixedTypeHint"/>
     </rule>
-    <rule ref="SlevomatCodingStandard.Commenting.DocCommentSpacing">
+    <!-- <rule ref="SlevomatCodingStandard.Commenting.DocCommentSpacing">
         <properties>
             <property name="linesCountBetweenDifferentAnnotationsTypes" value="1"/>
         </properties>
-    </rule>
+    </rule> -->
     <rule ref="SlevomatCodingStandard.ControlStructures.BlockControlStructureSpacing">
         <type>warning</type>
         <properties>
