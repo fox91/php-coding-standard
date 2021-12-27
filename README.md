@@ -4,17 +4,21 @@
 [![Downloads](https://img.shields.io/packagist/dt/fox91/coding-standard.svg?colorB=007EC6)](https://packagist.org/packages/fox91/coding-standard)
 [![Build status](https://github.com/fox91/php-coding-standard/workflows/php-ci/badge.svg?branch=main)](https://github.com/fox91/php-coding-standard/actions?query=workflow%3Aphp-ci+branch%3Amain)
 
-Compatible with PHP `7.3`, `7.4` and `8.0`.
+Compatible with PHP `7.4`, `8.0` and `8.1`.
 
 ## Included tools
 
-- PHP_CodeSniffer
-    + `dealerdirect/phpcodesniffer-composer-installer`
-    + `pheromone/phpcs-security-audit`
-    + `sirbrillig/phpcs-import-detection`
-    + `sirbrillig/phpcs-variable-analysis`
-    + `slevomat/coding-standard`
-    + `phpcompatibility/php-compatibility`
+- [PHP_CodeSniffer](https://packagist.org/packages/squizlabs/php_codesniffer)
+    + [`dealerdirect/phpcodesniffer-composer-installer`](https://packagist.org/packages/dealerdirect/phpcodesniffer-composer-installer): PHP_CodeSniffer Standards Composer Installer
+    + [`pheromone/phpcs-security-audit`](https://packagist.org/packages/pheromone/phpcs-security-audit): finds vulnerabilities and weaknesses related to security
+    + [`sirbrillig/phpcs-import-detection`](https://packagist.org/packages/sirbrillig/phpcs-import-detection): look for unused or unimported symbols
+    + [`sirbrillig/phpcs-variable-analysis`](https://packagist.org/packages/sirbrillig/phpcs-variable-analysis): detect problems with variables
+    + [`slevomat/coding-standard`](https://packagist.org/packages/slevomat/coding-standard): complements Consistence Coding Standard by providing sniffs with additional checks
+    + [`phpcompatibility/php-compatibility`](https://packagist.org/packages/phpcompatibility/php-compatibility): checks for PHP cross-version compatibility
+
+## Optional tools
+
+- [`pheromone/phpcs-security-audit`](https://packagist.org/packages/pheromone/phpcs-security-audit): finds vulnerabilities and weaknesses related to security in PHP code
 
 ## Installation
 
@@ -45,6 +49,10 @@ Create a file named `.phpcs.xml.dist` in the root of your project:
     <config name="ignore_warnings_on_exit" value="1"/>
     <config name="ParanoiaMode" value="1"/>
 
+    <!-- PHPCompatibility config -->
+    <!-- <config name="testVersion" value="7.4"/> -->
+
     <rule ref="Fox91CodingStandard"/>
+    <!-- <rule ref="Fox91CodingStandardStrict"/> -->
 </ruleset>
 ```
