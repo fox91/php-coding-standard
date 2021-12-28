@@ -2,6 +2,13 @@
 <ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Fox91 Coding Standard Strict" xsi:noNamespaceSchemaLocation="../vendor/squizlabs/php_codesniffer/phpcs.xsd">
     <rule ref="Fox91CodingStandard"/>
 
+    <!-- Generic sniffs -->
+    <rule ref="Generic.WhiteSpace.ScopeIndent">
+        <properties>
+            <property name="exact" value="true" />
+        </properties>
+    </rule>
+
     <!-- PSR1 sniffs -->
     <rule ref="PSR1.Classes.ClassDeclaration">
         <type>error</type>
