@@ -93,6 +93,9 @@
         <!-- Private properties MUST not be prefixed with an underscore -->
         <exclude name="Squiz.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
     </rule>
+    <rule ref="Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps">
+        <type>warning</type>
+    </rule>
     <rule ref="Squiz.NamingConventions.ValidVariableName.NotCamelCaps">
         <type>warning</type>
     </rule>
