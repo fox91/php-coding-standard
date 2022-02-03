@@ -17,8 +17,8 @@ defaults:
     working-directory: ./
 
 jobs:
-  tests:
-    name: "Dev Tools (PHP ${{ matrix.php-version }}, ${{ matrix.dependencies }})"
+  lint:
+    name: "Lint (PHP ${{ matrix.php-version }}, ${{ matrix.dependencies }})"
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -52,7 +52,7 @@ jobs:
         uses: actions/cache@v2.1.7
         with:
           path: ${{ steps.composer-cache.outputs.dir }}
-          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.json') }}
           restore-keys: ${{ runner.os }}-composer-
       -
         name: Handle lowest dependencies update
