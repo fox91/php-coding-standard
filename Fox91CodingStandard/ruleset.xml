@@ -33,7 +33,14 @@
     </rule>
     <rule ref="Generic.WhiteSpace.ArbitraryParenthesesSpacing"/>
     <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
-    <rule ref="Generic.WhiteSpace.ScopeIndent"/>
+    <rule ref="Generic.WhiteSpace.ScopeIndent">
+        <properties>
+            <property name="ignoreIndentationTokens" type="array">
+                <element value="T_COMMENT"/>
+                <element value="T_DOC_COMMENT_OPEN_TAG"/>
+            </property>
+        </properties>
+    </rule>
 
     <!-- PHPCompatibility sniffs -->
     <rule ref="PHPCompatibility"/>
@@ -45,8 +52,8 @@
     </rule>
 
     <!-- PSR2 sniffs -->
-    <rule ref="PSR2.Classes.ClassDeclaration.OpenBraceNewLine"/>
-    <rule ref="PSR2.Classes.PropertyDeclaration.Underscore">
+    <rule ref="PSR2.Classes.ClassDeclaration"/>
+    <rule ref="PSR2.Classes.PropertyDeclaration">
         <type>error</type>
     </rule>
     <rule ref="PSR2.ControlStructures.ControlStructureSpacing"/>
