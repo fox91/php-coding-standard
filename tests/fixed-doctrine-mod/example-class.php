@@ -34,8 +34,7 @@ class Example implements IteratorAggregate
 
     private bool $baz;
 
-    /** @var ControlStructureSniff|int|string|null */
-    private $baxBax;
+    private ControlStructureSniff|int|string|null $baxBax = null;
 
     public function __construct(?int $foo = null, array $bar = [], bool $baz = false, $baxBax = 'unused')
     {
@@ -53,9 +52,7 @@ class Example implements IteratorAggregate
         return $this->foo;
     }
 
-    /**
-     * @return iterable
-     */
+    /** @return iterable */
     public function getIterator(): array
     {
         assert($this->bar !== null);
@@ -70,9 +67,7 @@ class Example implements IteratorAggregate
         return $this->baz;
     }
 
-    /**
-     * @throws InvalidArgumentException if this example cannot baz.
-     */
+    /** @throws InvalidArgumentException if this example cannot baz. */
     public function mangleBar(int $length): void
     {
         if (!$this->baz) {

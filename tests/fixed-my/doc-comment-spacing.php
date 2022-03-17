@@ -68,4 +68,21 @@ class Test
     public function e(iterable $singleAnnotation): void
     {
     }
+
+    /***/
+    public function f(bool $s): ?int
+    {
+        if ($s) {
+            return 44;
+        }
+        return null;
+    }
+
+    public function g(bool $s): ?int
+    {
+        if ($s) {
+            return 44;
+        }
+        return null;
+    }
 }

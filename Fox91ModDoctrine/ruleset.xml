@@ -2,7 +2,7 @@
 <ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Fox91 modified Doctrine" xsi:noNamespaceSchemaLocation="../vendor/squizlabs/php_codesniffer/phpcs.xsd">
     <!-- Import Doctrine coding standard (base) -->
     <rule ref="Doctrine">
-        <exclude name="PSR12.Operators.OperatorSpacing"/>
+        <!-- <exclude name="PSR12.Operators.OperatorSpacing"/> -->
         <exclude name="Generic.Formatting.MultipleStatementAlignment"/>
     </rule>
 
@@ -44,6 +44,9 @@
             </property>
         </properties>
     </rule>
+
+    <!-- Require One Line Doc Comment where there's only 1 annotation present -->
+    <rule ref="SlevomatCodingStandard.Commenting.RequireOneLineDocComment"/>
 
     <!-- Require comma after last parameter in multi-line function call -->
     <rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInCall"/>

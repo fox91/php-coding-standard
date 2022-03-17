@@ -6,6 +6,10 @@ if ($foo===$bar) {
     return $bar+$foo;
 }
 
+if ( $foo  !==$bar ) {
+    return $bar*$foo;
+}
+
 for ($i=0; $i<100; $i++) {
     echo $i >=10;
 }

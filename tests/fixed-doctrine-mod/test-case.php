@@ -5,9 +5,7 @@ namespace Fancy;
 
 use PHPUnit\Framework\TestCase as BaseTestCase;
 
-/**
- * @requires PHP 7.2
- */
+/** @requires PHP 7.2 */
 final class TestCase extends BaseTestCase
 {
     /**
