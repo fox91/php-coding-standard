@@ -29,7 +29,7 @@ class Test
      *
      * Second Paragraph Description
      *
-     * @param int[] $foo
+     * @param iterable<int> $foo
      *
      * @throws FooException
      */
@@ -55,12 +55,12 @@ class Test
      * @PHPCR\Uuid
      * @PHPCR\Field
      *
-     * @param int[] $foo
-     * @param int[] $bar
+     * @param iterable<int> $foo
+     * @param iterable<int> $bar
      * @psalm-param array<string, int> $foo
      * @phpstan-param array<string, int> $foo
      *
-     * @return int[]
+     * @return iterable<int>
      * @psalm-return array<string, int>
      * @phpstan-return array<string, int>
      *

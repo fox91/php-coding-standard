@@ -58,6 +58,9 @@
         </properties>
     </rule>
 
+    <!-- Require generic type hint syntax instead of array type hint syntax ("int[]" -> "array<int>") -->
+    <rule ref="SlevomatCodingStandard.TypeHints.DisallowArrayTypeHintSyntax"/>
+
     <!-- Ensure no duplicated whitespaces -->
     <rule ref="SlevomatCodingStandard.Whitespaces.DuplicateSpaces"/>
 

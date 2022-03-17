@@ -26,7 +26,7 @@ class Example implements IteratorAggregate
 
     private ?int $foo = null;
 
-    /** @var string[] */
+    /** @var array<string> */
     private array $bar;
 
     /** @var array<string> */
