@@ -3,29 +3,36 @@ declare(strict_types=1);
 
 namespace Example;
 
+use ArrayIterator;
+use Doctrine\Sniffs\Spacing\ControlStructureSniff;
 use Fancy\TestCase;
+use InvalidArgumentException;
+use IteratorAggregate;
 
+use function assert;
 use function strlen as stringLength;
+use function substr;
 
+use const PHP_MINOR_VERSION;
 use const PHP_RELEASE_VERSION as PHP_PATCH_VERSION;
+use const PHP_VERSION;
 
 /**
  * Description
- * @author Invalid
- * @since 0.1
  */
-class Example implements \IteratorAggregate
+class Example implements IteratorAggregate
 {
-    private const VERSION = \PHP_VERSION - (PHP_MINOR_VERSION * 100) - PHP_PATCH_VERSION;
+    private const VERSION = PHP_VERSION - (PHP_MINOR_VERSION * 100) - PHP_PATCH_VERSION;
 
-    /** @var null|int */
-    private $foo;
+    private ?int $foo = null;
+
+    /** @var string[] */
+    private array $bar;
 
     /** @var array<string> */
-    private $bar;
+    private array $bar2;
 
-    /** @var bool */
-    private $baz;
+    private bool $baz;
 
     /** @var ControlStructureSniff|int|string|null */
     private $baxBax;
@@ -41,40 +48,43 @@ class Example implements \IteratorAggregate
     /**
      * Description
      */
-    public function getFoo() : ? int
+    public function getFoo(): ?int
     {
         return $this->foo;
     }
 
-    /** @return iterable */
-    public function getIterator() :array
+    /**
+     * @return iterable
+     */
+    public function getIterator(): array
     {
         assert($this->bar !== null);
-        return new \ArrayIterator($this->bar);
+
+        return new ArrayIterator($this->bar);
     }
 
     public function isBaz(): bool
     {
-        list($foo, $bar, $baz) = $this->bar;
+        [$foo, $bar, $baz] = $this->bar;
 
         return $this->baz;
     }
 
-    /** @throws InvalidArgumentException if this example cannot baz. */
+    /**
+     * @throws InvalidArgumentException if this example cannot baz.
+     */
     public function mangleBar(int $length): void
     {
         if (!$this->baz) {
-            throw new \InvalidArgumentException();
+            throw new InvalidArgumentException();
         }
 
-        $this->bar = (string) $this->baxBax ?? \substr($this->bar, stringLength($this->bar - $length));
+        $this->bar = (string) $this->baxBax ?? substr($this->bar, stringLength($this->bar - $length));
     }
 
     public static function getMinorVersion(): int
     {
-        $version = self::VERSION;
-
-        return $version;
+        return self::VERSION;
     }
 
     public static function getTestCase(): TestCase

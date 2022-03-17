@@ -1,18 +1,13 @@
 <?php
-
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace Example;
 
-use Throwable;
+use Fancy\TestCase;
 
 use function strlen as stringLength;
 
-use Fancy\TestCase as TestCase;
-
 use const PHP_RELEASE_VERSION as PHP_PATCH_VERSION;
-
-use Doctrine\Sniffs\Spacing\ControlStructureSniff;
 
 /**
  * Description
@@ -26,7 +21,7 @@ class Example implements \IteratorAggregate
     /** @var null|int */
     private $foo;
 
-    /** @var string[] */
+    /** @var array<string> */
     private $bar;
 
     /** @var array<string> */
@@ -38,27 +33,23 @@ class Example implements \IteratorAggregate
     /** @var ControlStructureSniff|int|string|null */
     private $baxBax;
 
-    public function __construct(int $foo = null, array $bar = [], bool $baz = false, $baxBax = 'unused')
+    public function __construct(?int $foo = null, array $bar = [], bool $baz = false, $baxBax = 'unused')
     {
-        $this->foo    = $foo;
-        $this->bar    = $bar;
-        $this->baz    = $baz;
+        $this->foo = $foo;
+        $this->bar = $bar;
+        $this->baz = $baz;
         $this->baxBax = $baxBax;
     }
 
     /**
      * Description
-     * @return int|null
      */
     public function getFoo() : ? int
     {
         return $this->foo;
     }
 
-
-    /**
-     * @return iterable
-     */
+    /** @return iterable */
     public function getIterator() :array
     {
         assert($this->bar !== null);
@@ -72,9 +63,7 @@ class Example implements \IteratorAggregate
         return $this->baz;
     }
 
-    /**
-     * @throws InvalidArgumentException if this example cannot baz.
-     */
+    /** @throws InvalidArgumentException if this example cannot baz. */
     public function mangleBar(int $length): void
     {
         if (!$this->baz) {
@@ -95,5 +84,4 @@ class Example implements \IteratorAggregate
     {
         return new TestCase();
     }
-
 }

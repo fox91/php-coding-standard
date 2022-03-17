@@ -17,6 +17,5 @@
     <!-- PHPCompatibility config -->
     <!-- <config name="testVersion" value="7.4"/> -->
 
-    <rule ref="Fox91CodingStandard"/>
-    <!-- <rule ref="Fox91CodingStandardStrict"/> -->
+    <rule ref="Fox91ModDoctrine"/>
 </ruleset>
