@@ -65,10 +65,10 @@
     <rule ref="SlevomatCodingStandard.Whitespaces.DuplicateSpaces"/>
 
     <!-- Force no whitespace before and after concatenation -->
-    <rule ref="Squiz.Strings.ConcatenationSpacing">
+    <!-- <rule ref="Squiz.Strings.ConcatenationSpacing">
         <properties>
             <property name="spacing" value="0"/>
             <property name="ignoreNewlines" value="true"/>
         </properties>
-    </rule>
+    </rule> -->
 </ruleset>
