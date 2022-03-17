@@ -22,4 +22,7 @@ assert($nullableType instanceof Type || $nullableType === null);
 $multipleScalarTypes = expression();
 assert(is_int($multipleScalarTypes) || is_float($multipleScalarTypes) || is_bool($multipleScalarTypes) || is_string($multipleScalarTypes) || is_array($multipleScalarTypes) || $multipleScalarTypes === null);
 
+/** @var array<string> $arrayOfStrings */
+$arrayOfStrings = expression();
+
 /** @var Potato $variableThatIsNowhereToBeFound */

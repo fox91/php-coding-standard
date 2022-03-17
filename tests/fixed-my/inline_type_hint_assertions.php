@@ -22,4 +22,7 @@ $nullableType = expression();
 /** @var int|float|bool|string|array|null $multipleScalarTypes */
 $multipleScalarTypes = expression();
 
+/** @var array<string> $arrayOfStrings */
+$arrayOfStrings = expression();
+
 /** @var Potato $variableThatIsNowhereToBeFound */

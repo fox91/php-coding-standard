@@ -28,4 +28,7 @@ assert(
     ) || $multipleScalarTypes === null,
 );
 
+/** @var array<string> $arrayOfStrings */
+$arrayOfStrings = expression();
+
 /** @var Potato $variableThatIsNowhereToBeFound */
