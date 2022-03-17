@@ -31,11 +31,15 @@ class Example implements \IteratorAggregate
     /** @var bool */
     private $baz;
 
-    public function __construct(?int $foo = null, array $bar = [], bool $baz = false, private $baxBax = 'unused')
+    /** @var ControlStructureSniff|int|string|null */
+    private $baxBax;
+
+    public function __construct(?int $foo = null, array $bar = [], bool $baz = false, $baxBax = 'unused')
     {
         $this->foo = $foo;
         $this->bar = $bar;
         $this->baz = $baz;
+        $this->baxBax = $baxBax;
     }
 
     /**

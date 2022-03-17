@@ -35,7 +35,8 @@ class Example implements IteratorAggregate
 
     private bool $baz;
 
-    private ControlStructureSniff|int|string|null $baxBax = null;
+    /** @var ControlStructureSniff|int|string|null */
+    private $baxBax;
 
     public function __construct(?int $foo = null, array $bar = [], bool $baz = false, $baxBax = 'unused')
     {
