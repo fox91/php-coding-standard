@@ -10,6 +10,16 @@ class EarlyReturn
         return $bar === 'bar';
     }
 
+    public function notBar(): bool
+    {
+        return $bar !== 'bar';
+    }
+
+    public function notBar2(): bool
+    {
+        return !($bar === 'bar');
+    }
+
     public function foo(): ?string
     {
         foreach ($itens as $item) {

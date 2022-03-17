@@ -15,6 +15,20 @@ class EarlyReturn
         }
     }
 
+    public function notBar(): bool
+    {
+        if ($bar === 'bar') {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public function notBar2(): bool
+    {
+        return !($bar === 'bar');
+    }
+
     public function foo(): ?string
     {
         foreach ($itens as $item) {
