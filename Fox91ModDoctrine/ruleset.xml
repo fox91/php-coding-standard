@@ -4,6 +4,10 @@
     <rule ref="Doctrine">
         <!-- <exclude name="PSR12.Operators.OperatorSpacing"/> -->
         <exclude name="Generic.Formatting.MultipleStatementAlignment"/>
+        <exclude name="SlevomatCodingStandard.Classes.SuperfluousAbstractClassNaming"/>
+        <exclude name="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming"/>
+        <exclude name="SlevomatCodingStandard.Classes.SuperfluousInterfaceNaming"/>
+        <exclude name="SlevomatCodingStandard.Classes.SuperfluousTraitNaming"/>
     </rule>
 
     <!-- Force no whitespace after `!` -->
