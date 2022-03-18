@@ -16,7 +16,7 @@ main() {
   echo "START"
 
   test 'fixed-my' 'Fox91CodingStandard'
-  test 'fixed-my-strict' 'Fox91CodingStandardStrict'
+  # test 'fixed-my-strict' 'Fox91CodingStandardStrict'
   test 'fixed-doctrine' 'Doctrine'
   test 'fixed-doctrine-mod' 'Fox91ModDoctrine'
 

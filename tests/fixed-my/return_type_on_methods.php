@@ -25,6 +25,10 @@ class Test
     {
     }
 
+    public function e1():void
+    {
+    }
+
     public function f(
         int $a,
         int $c,
@@ -68,5 +72,15 @@ class Test
         int $e,
         int $b
     ): void {
+    }
+
+    public function j1(
+        int $a,
+        int $c,
+        int $d,
+        int $e,
+        int $b
+    ): void
+    {
     }
 }
