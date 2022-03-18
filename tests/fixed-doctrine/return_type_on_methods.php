@@ -26,7 +26,7 @@ class Test
     {
     }
 
-    public function e1(): void
+    public function e1(int $a, int $c): void
     {
     }
 
