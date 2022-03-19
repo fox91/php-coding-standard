@@ -14,5 +14,5 @@ final class PropertyTypeHintSpacing
     /** @var iterable<int>|null $nullableString*/
     public ?iterable $nullableString = null;
 
-    public ?string $nullableString2 = null;
+    public ? string $nullableString2 = null;
 }

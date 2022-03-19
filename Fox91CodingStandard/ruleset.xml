@@ -76,4 +76,12 @@
             <property name="ignoreNewlines" value="true"/>
         </properties>
     </rule> -->
+
+    <!-- Ensure 1 blank line between member vars, but don't require blank lines before the first. -->
+    <rule ref="Squiz.WhiteSpace.MemberVarSpacing">
+        <properties>
+            <property name="spacing" value="1" />
+            <property name="spacingBeforeFirst" value="0" />
+        </properties>
+    </rule>
 </ruleset>
