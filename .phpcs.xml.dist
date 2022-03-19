@@ -9,7 +9,7 @@
 
     <arg value="s"/>
 
-    <file>tests/input</file>
+    <file>Fox91ModDoctrine</file>
 
     <config name="ignore_warnings_on_exit" value="1"/>
     <config name="ParanoiaMode" value="1"/>
