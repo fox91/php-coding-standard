@@ -91,4 +91,14 @@ class Test
         }
         return null;
     }
+
+    /**
+     * @param         iterable<mixed> $baz
+     * @param         int|float $foo
+     * @return         int[]
+     * @param         array<string> $bar
+     */
+    public function h($foo, array $bar, iterable $baz): iterable
+    {
+    }
 }

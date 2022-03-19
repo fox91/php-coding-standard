@@ -8,6 +8,7 @@
         <exclude name="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming"/>
         <exclude name="SlevomatCodingStandard.Classes.SuperfluousInterfaceNaming"/>
         <exclude name="SlevomatCodingStandard.Classes.SuperfluousTraitNaming"/>
+        <exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamType"/>
     </rule>
 
     <!-- Force no whitespace after `!` -->
