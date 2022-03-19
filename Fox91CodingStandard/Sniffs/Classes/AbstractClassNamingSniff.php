@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Fox91ModDoctrine\Classes\NamingConventions;
+namespace Fox91CodingStandard\Classes\NamingConventions;
 
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;

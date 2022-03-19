@@ -25,6 +25,10 @@
         "slevomat/coding-standard": "^7.0.7",
         "squizlabs/php_codesniffer": "^3.6"
     },
+    "require-dev": {
+        "php-parallel-lint/php-console-highlighter": "^0.5.0 || ^1.0.0",
+        "php-parallel-lint/php-parallel-lint": "^1.2"
+    },
     "config": {
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true
@@ -36,5 +40,26 @@
     },
     "suggest": {
         "pheromone/phpcs-security-audit": "[--dev] A set of PHP_CodeSniffer rules that finds vulnerabilities and weaknesses related to security in PHP code"
+    },
+    "scripts": {
+        "cs-e:test": "phpcs --colors -n",
+        "cs:fix": "phpcbf --colors",
+        "cs:test": "phpcs --colors",
+        "lint:test": "parallel-lint --no-progress --blame --exclude vendor --exclude tests .",
+        "fix": [
+            "@cs:fix"
+        ],
+        "test": [
+            "@lint:test",
+            "@cs:test"
+        ]
+    },
+    "scripts-descriptions": {
+        "cs-e:test": "Run PHP_CodeSniffer tests, show only errors",
+        "cs:fix": "Run PHP_CodeSniffer fixes",
+        "cs:test": "Run PHP_CodeSniffer tests",
+        "fix": "Run all fixes!",
+        "lint:test": "Run PHP Parallel Lint tests",
+        "test": "Run all tests!"
     }
 }

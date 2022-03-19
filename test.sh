@@ -17,9 +17,9 @@ test() {
 main() {
   echo "START"
 
-  test 'fixed-7.4' 'Fox91ModDoctrine' '7.4'
-  test 'fixed-8.0' 'Fox91ModDoctrine' '8.0'
-  test 'fixed-8.1' 'Fox91ModDoctrine' '8.1'
+  test 'fixed-7.4' 'Fox91CodingStandard' '7.4'
+  test 'fixed-8.0' 'Fox91CodingStandard' '8.0'
+  test 'fixed-8.1' 'Fox91CodingStandard' '8.1'
 
   echo "END"
 }
