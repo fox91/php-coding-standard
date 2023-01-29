@@ -4,7 +4,7 @@
 [![Downloads](https://img.shields.io/packagist/dt/fox91/coding-standard.svg?colorB=007EC6)](https://packagist.org/packages/fox91/coding-standard)
 [![Build status](https://github.com/fox91/php-coding-standard/workflows/php-ci/badge.svg?branch=main)](https://github.com/fox91/php-coding-standard/actions?query=workflow%3Aphp-ci+branch%3Amain)
 
-Compatible with PHP `7.4`, `8.0` and `8.1`.
+Compatible with PHP `7.4`, `8.0`, `8.1` and `8.2`.
 
 ## Included tools
 
