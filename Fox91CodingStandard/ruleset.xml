@@ -146,6 +146,11 @@
     <!-- SlevomatCodingStandard sniffs -->
     <rule ref="SlevomatCodingStandard.Arrays.SingleLineArrayWhitespace"/>
     <rule ref="SlevomatCodingStandard.Arrays.TrailingArrayComma"/>
+    <rule ref="SlevomatCodingStandard.Attributes.AttributesOrder">
+        <properties>
+            <property name="orderAlphabetically" value="true" />
+        </properties>
+    </rule>
     <rule ref="SlevomatCodingStandard.Classes.ClassStructure">
         <properties>
             <property name="groups" type="array">

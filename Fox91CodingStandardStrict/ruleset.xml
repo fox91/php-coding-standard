@@ -35,11 +35,11 @@
         <exclude name="SlevomatCodingStandard.ControlStructures.NewWithoutParentheses.UselessParentheses"/>
         <exclude name="SlevomatCodingStandard.ControlStructures.RequireSingleLineCondition"/>
         <exclude name="SlevomatCodingStandard.ControlStructures.RequireYodaComparison"/>
-        <exclude name="SlevomatCodingStandard.Files.FunctionLength"/>
         <exclude name="SlevomatCodingStandard.Files.LineLength"/>
         <exclude name="SlevomatCodingStandard.Files.TypeNameMatchesFileName"/>
         <exclude name="SlevomatCodingStandard.Functions.DisallowArrowFunction"/>
         <exclude name="SlevomatCodingStandard.Functions.DisallowTrailingCommaInCall"/>
+        <exclude name="SlevomatCodingStandard.Functions.FunctionLength"/>
         <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameInAnnotation"/>
         <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedExceptions"/>
         <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalConstants.NonFullyQualified"/>
@@ -58,11 +58,10 @@
         </properties>
     </rule> -->
     <rule ref="SlevomatCodingStandard.ControlStructures.BlockControlStructureSpacing">
-        <type>warning</type>
         <properties>
-            <property name="tokensToCheck" type="array">
-                <element value="T_SWITCH"/>
-                <element value="T_TRY"/>
+            <property name="controlStructures" type="array">
+                <element value="if"/>
+                <element value="switch"/>
             </property>
         </properties>
     </rule>
