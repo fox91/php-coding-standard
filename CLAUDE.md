@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a PHP_CodeSniffer coding standard package that provides two rulesets: `Fox91CodingStandard` (standard) and `Fox91CodingStandardStrict` (strict). The project is distributed as a Composer package and integrates multiple PHP coding standard tools.
 
-**Supported PHP Versions**: 7.4, 8.0, 8.1, 8.2, 8.3, 8.4
+**Supported PHP Versions**: 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, 8.5
 
 ## Essential Commands
 
@@ -41,7 +41,7 @@ composer install
 ```
 
 The test script:
-- Creates fixed versions for PHP 7.4, 8.0, 8.1, 8.2, 8.3, and 8.4
+- Creates fixed versions for PHP 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, and 8.5
 - Runs `phpcbf` against test inputs in `tests/input/`
 - Outputs fixed files to `tests/fixed/php-{version}/{Standard}/`
 
@@ -99,7 +99,7 @@ Optional:
 ## CI/CD
 
 GitHub Actions workflow (`.github/workflows/php-ci.yml`) tests against:
-- All supported PHP versions (7.4 through 8.4)
+- All supported PHP versions (7.4 through 8.5)
 - Both "lowest" and "highest" dependency versions
 - Validates composer.json
 - Lists installed standards and sniffs
