@@ -53,6 +53,5 @@ Create a file named `.phpcs.xml.dist` in the root of your project:
     <!-- <config name="testVersion" value="7.4"/> -->
 
     <rule ref="Fox91CodingStandard"/>
-    <!-- <rule ref="Fox91CodingStandardStrict"/> -->
 </ruleset>
 ```
