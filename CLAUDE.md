@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a PHP_CodeSniffer coding standard package that provides two rulesets: `Fox91CodingStandard` (standard) and `Fox91CodingStandardStrict` (strict). The project is distributed as a Composer package and integrates multiple PHP coding standard tools.
+This is a PHP_CodeSniffer coding standard package that provides the `Fox91CodingStandard` ruleset. The project is distributed as a Composer package and integrates multiple PHP coding standard tools.
 
 **Supported PHP Versions**: 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, 8.5
 
@@ -20,12 +20,8 @@ composer install
 # Check code against Fox91CodingStandard
 ./vendor/bin/phpcs --standard=Fox91CodingStandard <path>
 
-# Check code against Fox91CodingStandardStrict
-./vendor/bin/phpcs --standard=Fox91CodingStandardStrict <path>
-
 # Auto-fix code style issues
 ./vendor/bin/phpcbf --standard=Fox91CodingStandard <path>
-./vendor/bin/phpcbf --standard=Fox91CodingStandardStrict <path>
 
 # List installed coding standards
 ./vendor/bin/phpcs -i
@@ -58,21 +54,13 @@ composer validate --strict --with-dependencies
 
 ### Ruleset Structure
 
-The project defines two coding standards as PHP_CodeSniffer rulesets:
-
-1. **Fox91CodingStandard** (`Fox91CodingStandard/ruleset.xml`): The base standard
-   - Imports rules from Generic, PSR1, PSR2, PSR12, Squiz, PHPCompatibility, SlevomatCodingStandard, and VariableAnalysis
-   - Configures forbidden functions (e.g., forbids `compact`, `extract`, `create_function`)
-   - Enforces strict types declaration
-   - Requires type hints for parameters, properties, and return values
-   - Enforces trailing commas in arrays and function calls
-   - Several sniffs set to "warning" level for flexibility
-
-2. **Fox91CodingStandardStrict** (`Fox91CodingStandardStrict/ruleset.xml`): Extends the base standard
-   - References `Fox91CodingStandard` and adds stricter rules
-   - Includes full PSR2 compliance
-   - Enables nearly all SlevomatCodingStandard sniffs with specific exclusions
-   - Promotes variable naming warnings to errors
+The project defines **Fox91CodingStandard** (`Fox91CodingStandard/ruleset.xml`):
+- Imports rules from Generic, PSR1, PSR2, PSR12, Squiz, PHPCompatibility, SlevomatCodingStandard, and VariableAnalysis
+- Configures forbidden functions (e.g., forbids `compact`, `extract`, `create_function`)
+- Enforces strict types declaration
+- Requires type hints for parameters, properties, and return values
+- Enforces trailing commas in arrays and function calls
+- Several sniffs set to "warning" level for flexibility
 
 ### Dependencies
 
@@ -94,7 +82,7 @@ Optional:
 **Type Hints**: Array type hints disallowed (use specific types like `array<string>` in docblocks)
 **Trailing Commas**: Required in arrays and function calls
 **Yoda Conditions**: Disallowed
-**Function Length**: Warning at 40 lines (standard only)
+**Function Length**: Warning at 40 lines
 
 ## CI/CD
 
@@ -108,5 +96,4 @@ GitHub Actions workflow (`.github/workflows/php-ci.yml`) tests against:
 
 - The test suite requires multiple PHP versions installed locally (php7.4, php8.0, etc.)
 - PHPCompatibility checks require setting `testVersion` config (e.g., `--runtime-set testVersion 7.4-`)
-- The strict standard is significantly more opinionated and may require substantial code changes
-- When modifying rulesets, test against all PHP versions using `./tests/run.sh`
+- When modifying the ruleset, test against all PHP versions using `./tests/run.sh`

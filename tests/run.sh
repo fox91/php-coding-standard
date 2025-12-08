@@ -20,7 +20,6 @@ main() {
   )
   typeset -a stds=(
     Fox91CodingStandard
-    Fox91CodingStandardStrict
   )
 
   typeset std php_version
