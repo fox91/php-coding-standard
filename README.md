@@ -31,8 +31,8 @@ Create a file named `.phpcs.xml.dist` in the root of your project:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <ruleset>
-    <!-- https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-Ruleset -->
-    <!-- https://github.com/squizlabs/PHP_CodeSniffer/wiki/Advanced-Usage -->
+    <!-- https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Annotated-Ruleset -->
+    <!-- https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Advanced-Usage -->
 
     <arg name="extensions" value="php"/>
     <arg name="tab-width" value="4"/>
