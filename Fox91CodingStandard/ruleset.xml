@@ -233,12 +233,4 @@
         <type>warning</type>
     </rule>
     <rule ref="SlevomatCodingStandard.Whitespaces.DuplicateSpaces"/>
-
-    <!-- VariableAnalysis sniffs -->
-    <rule ref="VariableAnalysis">
-        <exclude name="VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable"/>
-    </rule>
-    <rule ref="VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable">
-        <type>error</type>
-    </rule>
 </ruleset>

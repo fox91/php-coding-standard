@@ -10,15 +10,8 @@ Compatible with PHP `7.4`, `8.0`, `8.1`, `8.2`, `8.3`, `8.4` and `8.5`.
 
 - [PHP_CodeSniffer](https://packagist.org/packages/squizlabs/php_codesniffer)
     + [`dealerdirect/phpcodesniffer-composer-installer`](https://packagist.org/packages/dealerdirect/phpcodesniffer-composer-installer): PHP_CodeSniffer Standards Composer Installer
-    + [`pheromone/phpcs-security-audit`](https://packagist.org/packages/pheromone/phpcs-security-audit): finds vulnerabilities and weaknesses related to security
-    + [`sirbrillig/phpcs-import-detection`](https://packagist.org/packages/sirbrillig/phpcs-import-detection): look for unused or unimported symbols
-    + [`sirbrillig/phpcs-variable-analysis`](https://packagist.org/packages/sirbrillig/phpcs-variable-analysis): detect problems with variables
     + [`slevomat/coding-standard`](https://packagist.org/packages/slevomat/coding-standard): complements Consistence Coding Standard by providing sniffs with additional checks
     + [`phpcompatibility/php-compatibility`](https://packagist.org/packages/phpcompatibility/php-compatibility): checks for PHP cross-version compatibility
-
-## Optional tools
-
-- [`pheromone/phpcs-security-audit`](https://packagist.org/packages/pheromone/phpcs-security-audit): finds vulnerabilities and weaknesses related to security in PHP code
 
 ## Installation
 
